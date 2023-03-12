@@ -28,16 +28,16 @@ const MostrarHistorias = ({historias, setHistorias, setMostrarHistoria, setEdita
     }
 
   return (
-    <div className="grid items-center gap-10 mr-10 ml-10 mt-20">
+    <div className="grid items-center gap-10 mr-10 ml-10 mt-20 w-screen">
         {
             historias.map( (historia) => {
                 const {titulo, cuerpo, ideas} = historia
-                const cuerpoRecortado = Array.from(cuerpo).filter((item, i) => i < 500 && item).join('')
+                const cuerpoRecortado = Array.from(cuerpo).filter((item, i) => i < 140 && item).join('')
 
                 return (
                     <div key={generarId()}>
-                        <h3 className='font-bold text-2xl idea w-60'>{titulo}</h3>
-                        <p className='mono text-lg font-bold tracking-normal'>{`${cuerpoRecortado}...`}</p>
+                        <h3 className='font-bold text-2xl idea w-60 mb-2'>{titulo}</h3>
+                        <p className='mono text-lg font-bold tracking-normal w-3/4'>{`${cuerpoRecortado}...`}</p>
 
                         <div className='flex justify-around mt-8 '>
                             <button 
