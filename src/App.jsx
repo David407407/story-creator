@@ -11,7 +11,7 @@ function App() {
   const [editarHistoria, setEditarHistoria] = useState({})
 
   return (
-    <div className="text-black">
+    <div className="text-black overflow-x-hidden">
         <Header/>
         <CrearHistoria
           setMostrarHistoria={setMostrarHistoria}
